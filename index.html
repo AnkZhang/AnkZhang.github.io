@@ -359,6 +359,197 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://AnkZhang.github.io/2019/05/06/JS基础概念注释/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="AnkZhang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AnkZhang Home">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/06/JS基础概念注释/" class="post-title-link" itemprop="url">JS基础概念注释</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-06 09:23:09 / 修改时间：23:58:11" itemprop="dateCreated datePublished" datetime="2019-05-06T09:23:09+08:00">2019-05-06</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/概念解释/" itemprop="url" rel="index"><span itemprop="name">概念解释</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2019/05/06/JS基础概念注释/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/06/JS基础概念注释/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>浏览器缓存</strong><br>浏览器缓存就是把一个已经请求过的Web资源（如html页面，图片，js，数据等）拷贝一份副本储存在浏览器中。缓存会根据进来的请求保存输出内容的副本。当下一个请求来到的时候，如果是相同的URL，缓存会根据缓存机制决定是直接使用副本响应访问请求，还是向源服务器再次发送请求。比较常见的就是浏览器会缓存访问过网站的网页，当再次访问这个URL地址的时候，如果网页没有更新，就不会再次下载网页，而是直接使用本地缓存的网页。只有当网站明确标识资源已经更新，浏览器才会再次下载网页。</p>
+<p><strong>CND缓存</strong><br>在浏览器和服务器间增加的一层缓存，缓存一些html、图片、css、xml等静态资源<br> 如果中间加上一层CDN，那么用户浏览器与服务器的交互如下：<br>客户端浏览器先检查是否有本地缓存是否过期，如果过期，则向CDN边缘节点发起请求，CDN边缘节点会检测用户请求数据的缓存是否过期，如果没有过期，则直接响应用户请求，此时一个成http请求结束;如果数据已经过期，那么CDN还需要向源站发出回源请求(back to the source request),来拉取最新的数据。</p>
+<p><strong>DNS缓存</strong><br> DNS就是(Domain Name System)“域名系统”的缩写，用来将主机名和域名转换为IP地址。<br> DNS缓存是指在正常访问ip之后，系统会将这个ip存储起来，当再次访问的时候，系统就会直接把本地的DNS缓存提取显示，等于是加速了网址的解析。</p>
+<p> <strong>服务器缓存</strong><br>把服务器的内存划分出来一部分作为缓存，缓存客户机读取的数据</p>
+<p><strong>cookie和session</strong><br>cookie保存在浏览器端，是服务端发给客户端的特殊信息，以文本的方式保存在客户端，每次请求都会带上它。<br>cookie机制：如果不设置过期时间，cookies的声明随浏览器的关闭而结束，称为会话cookies. 如果有过期时间，则直到过期时间才会消失。存储限制了数据量，只允许4KB</p>
+<p>session 称为会话信息，在web服务器上记录客户状态，记录的数据形式是对象，我们无法轻松访问会话值，因此它更安全。</p>
+<p><strong>localStorage和sessionStorage</strong><br>相同点： 均只能存储字符串类型的对象<br>使用相同的API：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">localStorage.setItem(&apos;key&apos;,&apos;value&apos;);//存储键值对</span><br><span class="line">localStorage.getItem(&apos;key&apos;)//获取名为&apos;key&apos;的值</span><br><span class="line">枚举localStorage的方法：</span><br><span class="line">for (var i=0;i&lt;localStorage.length;i++) &#123;</span><br><span class="line">    var name = localStorage.key(i)​;</span><br><span class="line">    var value = localStorage.getItem(name);​</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">删除存储信息的键值对：</span><br><span class="line">localStorage.removeItem(&apos;key&apos;)//删除某一个</span><br><span class="line">localStorage.clear();// 清空localStorage中的所有信息</span><br></pre></td></tr></table></figure></p>
+<p>不同点： localStorage生命周期是永久，除非手动清除否则信息一直存在<br>sessionStorage生命周期为当前窗口或标签页，一旦被关闭则存储数据永久清空</p>
+
+          
+        
+      
+    </div>
+
+    
+
+
+
+
+    <div>
+        
+    </div>
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://AnkZhang.github.io/2019/05/04/报错总结/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1381,7 +1572,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/04/07/examination/" class="post-title-link" itemprop="url">前端面试试题</a>
+                <a href="/2019/04/07/examination/" class="post-title-link" itemprop="url">前端试题</a>
               
             
           </h1>
@@ -1423,7 +1614,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-09 11:35:49" itemprop="dateModified" datetime="2019-04-09T11:35:49+08:00">2019-04-09</time>
+                <time title="修改时间：2019-05-06 09:25:50" itemprop="dateModified" datetime="2019-05-06T09:25:50+08:00">2019-05-06</time>
               
             
           </span>
@@ -1440,7 +1631,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/前端/" itemprop="url" rel="index"><span itemprop="name">前端</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/知识点剖析/" itemprop="url" rel="index"><span itemprop="name">知识点剖析</span></a></span>
 
                 
                 
@@ -1794,7 +1985,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1823,7 +2014,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">6</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1852,7 +2047,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">6</span>
+                      
+                    
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1975,7 +2172,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共6.2k字</span>
+  <span class="post-count">博客全站共7k字</span>
 </div>
 
 
