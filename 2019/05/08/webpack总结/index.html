@@ -97,13 +97,18 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="AnkZhang Home">
-<meta property="og:url" content="https://AnkZhang.github.io/categories/知识点剖析/index.html">
+  <meta name="description" content="webpackwebpack把项目当做一个整体，通过一个给定的主文件，webpack从这个主文件开始找到项目所有依赖文件，使用loaders来处理打包成浏览器可识别的文件。install首先添加我们即将使用的包：1npm install webpack webpack-dev-server --save-dev webpack是我们需要的模块打包机">
+<meta name="keywords" content="webpack">
+<meta property="og:type" content="article">
+<meta property="og:title" content="webpack总结">
+<meta property="og:url" content="https://AnkZhang.github.io/2019/05/08/webpack总结/index.html">
 <meta property="og:site_name" content="AnkZhang Home">
+<meta property="og:description" content="webpackwebpack把项目当做一个整体，通过一个给定的主文件，webpack从这个主文件开始找到项目所有依赖文件，使用loaders来处理打包成浏览器可识别的文件。install首先添加我们即将使用的包：1npm install webpack webpack-dev-server --save-dev webpack是我们需要的模块打包机">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-05-08T07:30:29.861Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AnkZhang Home">
+<meta name="twitter:title" content="webpack总结">
+<meta name="twitter:description" content="webpackwebpack把项目当做一个整体，通过一个给定的主文件，webpack从这个主文件开始找到项目所有依赖文件，使用loaders来处理打包成浏览器可识别的文件。install首先添加我们即将使用的包：1npm install webpack webpack-dev-server --save-dev webpack是我们需要的模块打包机">
 
 
 
@@ -111,7 +116,7 @@
 
   
   
-  <link rel="canonical" href="https://AnkZhang.github.io/categories/知识点剖析/">
+  <link rel="canonical" href="https://AnkZhang.github.io/2019/05/08/webpack总结/">
 
 
 
@@ -121,7 +126,7 @@
   };
 </script>
 
-  <title>分类: 知识点剖析 | AnkZhang Home</title>
+  <title>webpack总结 | AnkZhang Home</title>
   
 
 
@@ -169,7 +174,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <a href="https://github.com/AnkZhang" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 
@@ -250,7 +255,7 @@
         
         
           
-          <li class="menu-item menu-item-categories menu-item-active">
+          <li class="menu-item menu-item-categories">
 
     
     
@@ -338,80 +343,321 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>知识点剖析<small>分类</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://AnkZhang.github.io/2019/05/08/webpack总结/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="AnkZhang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AnkZhang Home">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2019/04/07/examination/" itemprop="url">
-            
-              <span itemprop="name">前端试题</span>
-            
-          </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">webpack总结
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-07T18:10:58+08:00" content="2019-04-07">
-          04-07
-        </time>
-      </div>
+              
+            
+          </h1>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+          <span class="post-time">
 
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-08 14:01:30 / 修改时间：15:30:29" itemprop="dateCreated datePublished" datetime="2019-05-08T14:01:30+08:00">2019-05-08</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/概念解释/" itemprop="url" rel="index"><span itemprop="name">概念解释</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2019/05/08/webpack总结/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/08/webpack总结/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><strong>webpack</strong><br>webpack把项目当做一个整体，通过一个给定的主文件，webpack从这个主文件开始找到项目所有依赖文件，使用loaders来处理打包成浏览器可识别的文件。<br><strong>install</strong><br>首先添加我们即将使用的包：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install webpack webpack-dev-server --save-dev</span><br></pre></td></tr></table></figure></p>
+<p>webpack是我们需要的模块打包机<br><a id="more"></a><br>webpack-dev-server用来创建本地服务器，监听你的代码修改，并自动刷新修改后的结果<br>下面是有关dev-server的配置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">contentBase,  // 为文件提供本地服务器</span><br><span class="line">port, // 监听端口，默认8080</span><br><span class="line">inline, // 设置为true,源文件发生改变自动刷新页面</span><br><span class="line">historyApiFallback  // 依赖HTML5 history API,如果设置为true,所有的页面跳转指向index.html</span><br><span class="line">devServer:&#123;</span><br><span class="line">    contentBase: &apos;./src&apos; // 本地服务器所加载的页面所在的目录</span><br><span class="line">    historyApiFallback: true, // 不跳转</span><br><span class="line">    inline: true // 实时刷新</span><br><span class="line">&#125;</span><br><span class="line">然后我们在根目录下创建一个&apos;webpack.config.js&apos;，在&apos;package.json&apos;添加两个命令用于本地开发和生产发布</span><br><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;start&quot;: &quot;webpack-dev-server&quot;,</span><br><span class="line">    &quot;build&quot;: &quot;webpack&quot;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p>entry: 用来写入口文件，它将是整个依赖关系的根<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var baseConfig = &#123;</span><br><span class="line">    entry: &#123;</span><br><span class="line">        main: &apos;./src/index.js&apos;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>output: 即使入口文件有多个，但是只有一个输出配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var path = require(&apos;path&apos;)</span><br><span class="line">    var baseConfig = &#123;</span><br><span class="line">    entry: &#123;</span><br><span class="line">        main: &apos;./src/index.js&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">    output: &#123;</span><br><span class="line">        filename: &apos;main.js&apos;,</span><br><span class="line">        path: path.resolve(&apos;./build&apos;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">    module.exports = baseConfig</span><br></pre></td></tr></table></figure></p>
+<p><strong>loader</strong><br>作用：<br>1 实现对不同格式的文件的处理，比如说将scss转换为css，或者typescript转化为js<br>loader是webpack最重要的部分之一，通过使用不同的Loader，我们能够调用外部的脚本或者工具，实现对不同格式文件的处理，loader需要在webpack.config.js里边单独用module进行配置，同时我们需要一个正则表达式来标识我们要修改的文件，然后有一个数组表示<br>我们表示我们即将使用的Loader,当然我们需要的loader需要通过npm 进行安装，例如我们需要解析less的文件，那么webpack.config.js的配置如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">var baseConfig = &#123;</span><br><span class="line">    entry: &#123;</span><br><span class="line">        main: &apos;./src/index.js&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">    output: &#123;</span><br><span class="line">        filename: &apos;[name].js&apos;,</span><br><span class="line">        path: path.resolve(&apos;./build&apos;)</span><br><span class="line">    &#125;,</span><br><span class="line">    devServer: &#123;</span><br><span class="line">        contentBase: &apos;./src&apos;,</span><br><span class="line">        historyApiFallBack: true,</span><br><span class="line">        inline: true</span><br><span class="line">    &#125;,</span><br><span class="line">    module: &#123;</span><br><span class="line">        rules: [</span><br><span class="line">            &#123;</span><br><span class="line">                test: /\.less$/,</span><br><span class="line">                use: [</span><br><span class="line">                    &#123;loader: &apos;style-loader&apos;&#125;,</span><br><span class="line">                    &#123;loader: &apos;css-loader&apos;&#125;,</span><br><span class="line">                    &#123;loader: &apos;less-loader&apos;&#125;</span><br><span class="line">                ],</span><br><span class="line">                exclude: /node_modules/</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>下面是一些常用的loader:<br>babel-loader： 让下一代的js文件转换成现代浏览器能够支持的JS文件;<br>css-loader,style-loader:两个建议配合使用，用来解析css文件，能够解释@import,url()如果需要解析less就在后面加一个less-loader<br><strong>Plugins</strong><br>对整个构建过程起作用的外部引用<br>例如： ExtractTextWebpackPlugin该插件的主要是为了抽离css样式,防止将样式打包在js中引起页面样式加载错乱的现象<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">var ExtractTextPlugin = require(&apos;extract-text-webpack-plugin&apos;)</span><br><span class="line">    var lessRules = &#123;</span><br><span class="line">        use: [</span><br><span class="line">            &#123;loader: &apos;css-loader&apos;&#125;,</span><br><span class="line">            &#123;loader: &apos;less-loader&apos;&#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    var baseConfig = &#123;</span><br><span class="line">        // ... </span><br><span class="line">        module: &#123;</span><br><span class="line">            rules: [</span><br><span class="line">                // ...</span><br><span class="line">                &#123;test: /\.less$/, use: ExtractTextPlugin.extract(lessRules)&#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;,</span><br><span class="line">        plugins: [</span><br><span class="line">            new ExtractTextPlugin(&apos;main.css&apos;)</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p>HtmlWebpackPlugin依据一个简单的index.html模版，生成一个自动引用你打包后的js文件的新index.html<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var HTMLWebpackPlugin = require(&apos;html-webpack-plugin&apos;)</span><br><span class="line">    var baseConfig = &#123;</span><br><span class="line">        // ...</span><br><span class="line">        plugins: [</span><br><span class="line">            new HTMLWebpackPlug()</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p>HotModuleReplacementPlugin它允许你在修改组件代码时，自动刷新实时预览修改后的结果(注意永远不要在生产环境中使用HMR)<br>webapck.config.js的全部内容:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">const webpack = require(&quot;webpack&quot;)</span><br><span class="line">    const HtmlWebpackPlugin = require(&quot;html-webpack-plugin&quot;)</span><br><span class="line">    var ExtractTextPlugin = require(&apos;extract-text-webpack-plugin&apos;)</span><br><span class="line">    var lessRules = &#123;</span><br><span class="line">        use: [</span><br><span class="line">            &#123;loader: &apos;css-loader&apos;&#125;,</span><br><span class="line">            &#123;loader: &apos;less-loader&apos;&#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line">    module.exports = &#123;</span><br><span class="line">        entry: &#123;</span><br><span class="line">                main: &apos;./src/index.js&apos;</span><br><span class="line">            &#125;,</span><br><span class="line">            output: &#123;</span><br><span class="line">                filename: &apos;[name].js&apos;,</span><br><span class="line">                path: path.resolve(&apos;./build&apos;)</span><br><span class="line">            &#125;,</span><br><span class="line">            devServer: &#123;</span><br><span class="line">                contentBase: &apos;/src&apos;,</span><br><span class="line">                historyApiFallback: true,</span><br><span class="line">                inline: true,</span><br><span class="line">                hot: true</span><br><span class="line">            &#125;,</span><br><span class="line">            module: &#123;</span><br><span class="line">                rules: [</span><br><span class="line">                    &#123;test: /\.less$/, use: ExtractTextPlugin.extract(lessRules)&#125;</span><br><span class="line">                ]</span><br><span class="line">            &#125;,</span><br><span class="line">            plugins: [</span><br><span class="line">            new ExtractTextPlugin(&apos;main.css&apos;)</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>产品阶段的构建</strong><br>目前为止，在开发阶段的东西我们已经基本完成了。但是在产品阶段，还需要对资源进行别的<br>处理，例如压缩，优化，缓存，分离css和js。首先我们来定义产品环境：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var ENV = process.env.NODE_ENV</span><br><span class="line">    var baseConfig = &#123;</span><br><span class="line">        // ... </span><br><span class="line">        plugins: [</span><br><span class="line">            new webpack.DefinePlugin(&#123;</span><br><span class="line">                &apos;process.env.NODE_ENV&apos;: JSON.stringify(ENV)</span><br><span class="line">            &#125;)</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p>然后还需要修改我们的script命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;start&quot;: &quot;NODE_ENV=developmenwebpack-dev-server&quot;,</span><br><span class="line">    &quot;build&quot;: &quot;NODE_ENV=production webpack&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>当你引入那些不会进行生产的代码，下面这个代码将非常有用。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if (process.env.NODE_ENV === &apos;development&apos;) &#123;</span><br><span class="line">        console.warn(&apos;这个警告会在生产阶段消失&apos;)</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>优化插件</strong><br>OccurenceOrderPlugin: 为组件分配ID,通过这个插件webpack可以分析和优先考虑使用最多 的模块，然后为他们分配最小的ID<br>UglifyJsPlugin: 压缩代码<br>下面是使用的方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var baseConfig = &#123;</span><br><span class="line">// ...</span><br><span class="line">new webpack.optimize.OccurenceOrderPlugin()</span><br><span class="line">new webpack.optimize.UglifyJsPlugin()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>然后在我们使用npm run build会发现代码是压缩的<br><strong>webpack打包原理</strong><br>把所有依赖打包成一个 bundle.js 文件，通过代码分割成单元片段需加载<br><strong>webpack的优势</strong><br>1 以commonjs的形式书写脚本，对AMD和CMD的支持很全面方便旧代码进行迁移<br>2 开发便捷，能替代部分 grunt/gulp 的工作，比如打包、压缩混淆、图片转base64等<br><strong>loader和plugin的区别</strong><br>loader用于加载某些资源文件。对于webpack本身无法加载的css，img等资源，需要对应的loader进行资源转化加载；<br>plugin用于扩展webpack的功能，不局限于资源加载，还可以打包优化<br><strong>什么是bundle，什么是chunk，什么是module</strong><br>bundle：是由webpack打包出来的文件<br>chunk：是指webpack在进行模块依赖分析的时候，代码分割出来的代码块<br>module：是开发中的单个模块<br><strong>webpack和gulp的区别</strong><br>webpack是一个模块打包器，强调的是前端模块化方案。我们可以把开发中的所有资源都看成是模块，通过loader和plugin对资源进行处理。<br>gulp是一个前端自动化构建工具，自动化构建工具并不能把所有的模块打包到一起，也不能构建不同模块之间的依赖关系。<br><strong>如何自动生成webpack配置文件</strong><br>webpack-cli/vue-cli<br><strong>模块热更新</strong><br>使得代码修改之后不用刷新浏览器就可以更新<br>优点：只更新变更内容，以节省宝贵的开发时间</p>
 
       
     </div>
 
+    
+
+
+
+
+    <div>
+        
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:20px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+        
+    </div>
+
+    
+    
+    
+
+    
+      <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center;">
+  <img id="wechat_subscriber_qcode" src="/images/wechat-qcode.png" alt="AnkZhang wechat" style="width: 200px; max-width: 100%;">
+  <div>扫一扫上面的二维码可以关注我哦</div>
+</div>
+
+    
+
+    
+      
+    
+    
+
+
+      
+
+
+
+
+      <div>
+        <div id="reward-container">
+  <div>你可以打赏我一下哦</div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/webpack/" rel="tag"><i class="fa fa-tag"></i> webpack</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div class="social_share">
+            
+              <div>
+                
+
+<script src="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.js"></script>
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.css">
+
+
+  
+
+
+<div class="likely">
+	
+ 	 	<div class="twitter">Tweet</div>
+	
+ 	 	<div class="facebook">Share</div>
+	
+ 	 	<div class="vkontakte">Share</div>
+	
+ 	 	<div class="telegram">Send</div>
+	
+ 	 	<div class="whatsapp">Send</div>
+	
+</div>
+
+              </div>
+            
+            
+            
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/06/JS基础概念注释/" rel="next" title="JS基础概念注释">
+                <i class="fa fa-chevron-left"></i> JS基础概念注释
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
 
         </div>
         
@@ -760,6 +1006,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.0"></script>
+<script src="/js/post-details.js?v=7.1.0"></script>
+
+
 
   
 
@@ -805,6 +1055,8 @@
 
 
 
+
+  
 
 
   
