@@ -105,7 +105,7 @@
 <meta property="og:site_name" content="AnkZhang Home">
 <meta property="og:description" content="浏览器缓存浏览器缓存就是把一个已经请求过的Web资源（如html页面，图片，js，数据等）拷贝一份副本储存在浏览器中。缓存会根据进来的请求保存输出内容的副本。当下一个请求来到的时候，如果是相同的URL，缓存会根据缓存机制决定是直接使用副本响应访问请求，还是向源服务器再次发送请求。比较常见的就是浏览器会缓存访问过网站的网页，当再次访问这个URL地址的时候，如果网页没有更新，就不会再次下载网页，而是直">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-08T08:03:33.112Z">
+<meta property="og:updated_time" content="2019-05-09T04:40:52.844Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS基础概念注释">
 <meta name="twitter:description" content="浏览器缓存浏览器缓存就是把一个已经请求过的Web资源（如html页面，图片，js，数据等）拷贝一份副本储存在浏览器中。缓存会根据进来的请求保存输出内容的副本。当下一个请求来到的时候，如果是相同的URL，缓存会根据缓存机制决定是直接使用副本响应访问请求，还是向源服务器再次发送请求。比较常见的就是浏览器会缓存访问过网站的网页，当再次访问这个URL地址的时候，如果网页没有更新，就不会再次下载网页，而是直">
@@ -423,7 +423,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-08 16:03:33" itemprop="dateModified" datetime="2019-05-08T16:03:33+08:00">2019-05-08</time>
+                <time title="修改时间：2019-05-09 12:40:52" itemprop="dateModified" datetime="2019-05-09T12:40:52+08:00">2019-05-09</time>
               
             
           </span>
@@ -506,7 +506,7 @@
 <p>不同点： localStorage生命周期是永久，除非手动清除否则信息一直存在<br>sessionStorage生命周期为当前窗口或标签页，一旦被关闭则存储数据永久清空<br><strong>渐进增强</strong><br>从被所有浏览器支持的基本功能开始，逐步地添加那些只有新式浏览器才支持的功能<br><strong>优雅降级</strong><br>Web站点在所有新式浏览器中都能正常工作，如果用户使用的是老式浏览器，则代码会检查以确认它们是否能正常工作。<br><strong>线程与进程的区别</strong><br>进程：是执行中一段程序，即一旦程序被载入到内存中并准备执行，它就是一个进程<br>线程：单个进程中执行中每个任务就是一个线程。线程是进程中执行运算的最小单位。<br>区分：<br> 一个线程只能属于一个进程，但是一个进程可以拥有多个线程。多线程处理就是允许一个进程中在同一时刻执行多个任务。<br><strong>清除浮动</strong><br>一般是一个盒子里使用了CSS float浮动属性，导致父级对象盒子不能被撑开，这样CSS float浮动就产生了。<br>弊端：1  父元素背景不能显示  2 边框不撑开  3  margin padding设置值不能正确显示<br>清除浮动方法：<br>1 clear:both清除浮动<br>新建样式和空标签：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.clear&#123; clear: both&#125;</span><br><span class="line">&lt;!-- 父元素最后面加入空div标签 --&gt;</span><br><span class="line">&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
 <p>2 父元素定义： overflow: hidden<br>3 父元素div定义高度height<br>4 父元素增加清除浮动代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.clearfloat:after&#123;display:block;clear:both;content:&quot;&quot;;visibility:hidden;height:0&#125;</span><br><span class="line">.clearfloat&#123;zoom:1&#125;</span><br><span class="line">&lt;!-- 父元素 --&gt;</span><br><span class="line">&lt;div class=&quot;div1 clearfloat&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
 <p><strong>媒体查询</strong><br>媒体查询，就是响应式布局。通过不同的媒介类型和条件定义样式表规则<br>实例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">/* 当浏览器的可视区域小于980px */</span><br><span class="line">@media screen and (max-width:980px) &#123;</span><br><span class="line"> #wrap &#123;width： 90%; margin:0 auto;&#125;</span><br><span class="line"></span><br><span class="line"> #content &#123;width： 60%;padding： 5%;&#125;</span><br><span class="line"></span><br><span class="line"> #sidebar &#123;width： 30%;&#125;</span><br><span class="line"></span><br><span class="line"> #footer &#123;padding： 8% 5%;margin-bottom： 10px;&#125;</span><br><span class="line">&#125;</span><br><span class="line">@media screen and (max-width: 650px) &#123;</span><br><span class="line">#header &#123;height： auto;&#125;</span><br><span class="line"></span><br><span class="line">#searchform &#123;position： absolute;top： 5px;right： 0;&#125;</span><br><span class="line"></span><br><span class="line">#content &#123;width： auto; float： none; margin： 20px 0;&#125;</span><br><span class="line"></span><br><span class="line">#sidebar &#123;width： 100%; float： none; margin： 0;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><strong>闭包</strong><br>闭包就是能够读取其他函数内部变量的函数。由于在Javascript语言中，只有函数内部的子函数才能读取局部变量，因此可以把闭包简单理解成“定义在一个函数内部的函数”。<br>用处： 1 可以读取函数内部的变量<br>2 让这些变量的值始终保持在内存中<br><strong>JS同源策略</strong><br>所谓同源是指：协议，域名，端口号<br>同源策略是一种安全协议，指一段脚本只能读取来自同一来源的窗口和文档的属性。<br><strong>解决跨域问题</strong><br>跨域： 协议、域名、端口都相同才同域，否则都是跨域<br>出于安全考虑，服务器不允许ajax跨域获取数据，但是可以跨域获取文件内容。基于这一点可以:<br>1  JSONP能够用来解决跨域方案,主要是因为 <script> 脚本拥有跨域能力,而JSONP正是利用这一点来实现<br>2  CORS解决跨域问题:<br>CORS是一个W3C标准，全称是”跨域资源共享”.它允许浏览器向跨源服务器，发出XMLHttpRequest请求，从而克服了AJAX只能同源使用的限制。<br><strong>异步加载JS</strong><br>1 异步加载的方案： 动态插入 script 标签<br>2 通过 ajax 去获取 js 代码，然后通过 eval 执行<br>3 script 标签上添加 defer 或者 async 属性<br>4 创建并插入 iframe，让它异步执行 js<br><strong>Ajax使用到的技术</strong><br>HTML / XHTML和CSS - 这些技术用于显示内容和样式。<br>DOM - 用于动态显示和与数据交互。<br>XML - 用于与服务器之间传送数据<br>XMLHttpRequest - 用于客户端和服务器之间的异步通信<br>JavaScript - 主要用于客户端验证。</p>
+<p><strong>闭包</strong><br>闭包就是能够读取其他函数内部变量的函数。由于在Javascript语言中，只有函数内部的子函数才能读取局部变量，因此可以把闭包简单理解成“定义在一个函数内部的函数”。<br>用处： 1 可以读取函数内部的变量<br>2 让这些变量的值始终保持在内存中<br><strong>JS同源策略</strong><br>所谓同源是指：协议，域名，端口号<br>同源策略是一种安全协议，指一段脚本只能读取来自同一来源的窗口和文档的属性。<br><strong>解决跨域问题</strong><br>跨域： 协议、域名、端口都相同才同域，否则都是跨域<br>出于安全考虑，服务器不允许ajax跨域获取数据，但是可以跨域获取文件内容。基于这一点可以:<br>1  JSONP能够用来解决跨域方案,主要是因为 <script> 脚本拥有跨域能力,而JSONP正是利用这一点来实现<br>2  CORS解决跨域问题:<br>CORS是一个W3C标准，全称是”跨域资源共享”.它允许浏览器向跨源服务器，发出XMLHttpRequest请求，从而克服了AJAX只能同源使用的限制。<br><strong>异步加载JS</strong><br>1 异步加载的方案： 动态插入 script 标签<br>2 通过 ajax 去获取 js 代码，然后通过 eval 执行<br>3 script 标签上添加 defer 或者 async 属性<br>4 创建并插入 iframe，让它异步执行 js<br><strong>Ajax使用到的技术</strong><br>HTML / XHTML和CSS - 这些技术用于显示内容和样式。<br>DOM - 用于动态显示和与数据交互。<br>XML - 用于与服务器之间传送数据<br>XMLHttpRequest - 用于客户端和服务器之间的异步通信<br>JavaScript - 主要用于客户端验证。<br><strong>Quirks模式和Standanrds模式</strong><br>Quirks模式就是浏览器为了兼容早版本的浏览器，并未严格遵循W3C标准的网页而产生的渲染模式<br>Quirks模式下页面的变化与应对：<br>1 在Quirks Mode下，为body设置一个margin是无效的<br>2 默认的浮动图片的水平margin是3像素（而不是0）<br>3 在CSS中，使用margin: 0 auto使一个块居中是无效的。<br>4 span等行内元素设置宽高会有效<br>5 为了使浏览器渲染页面有统一的规范，推出了w3c标准，也就是standanrds模式<br>但是，标准出来以后，很多页面都是按照旧的渲染方法编写，如果用新的标准来渲染则页面显示异常，为了保证浏览器渲染的兼容性，使以前的页面也可以正常渲染，浏览器就保留了旧的渲染方法，这样两种渲染方案就共存在一个浏览器上。所以引出了DTD，即网页的头部声明来告诉浏览器以何种方式渲染<br><strong>常见的hack</strong><br>1 PNG24的图片在ie6浏览器上出现背景，解决方案做成PNG8<br>2 不同浏览器默认的margin和padding不同，加上全局的*{margin:0;padding:0}来统一<br>3 ie6双边距bug: 块元素float后，设置了横向的margin，发现float方向上的margin显示的比设置的大。解决方案： 给float元素添加一个display:inline<br>4 超链接访问过后hover样式和active样式不出现<br>LVHA的排列顺序添加css属性</p>
 </script></p>
       
     </div>
@@ -710,7 +710,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -776,7 +776,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">8</span>
+                      
+                    
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -899,7 +901,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共9.6k字</span>
+  <span class="post-count">博客全站共10.1k字</span>
 </div>
 
 
