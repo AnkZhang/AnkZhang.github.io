@@ -109,7 +109,7 @@
 <meta property="og:image" content="https://ankzhang.github.io/2019/04/28/Ajax的原理与使用/2.png">
 <meta property="og:image" content="https://ankzhang.github.io/2019/04/28/Ajax的原理与使用/3.png">
 <meta property="og:image" content="https://ankzhang.github.io/2019/04/28/Ajax的原理与使用/4.png">
-<meta property="og:updated_time" content="2019-04-30T04:10:44.565Z">
+<meta property="og:updated_time" content="2019-05-09T12:29:31.520Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ajax的原理与使用">
 <meta name="twitter:description" content="什么是AjaxAjax（Asynchronous JavaScript and XML的缩写）是一种异步请求数据的web开发技术，对于改善用户的体验和页面性能很有帮助。简单地说，在不需要重新刷新页面的情况下，Ajax 通过异步请求加载后台数据，并在网页上呈现出来。常见运用场景有表单验证是否登入成功、百度搜索下拉框提示和快递单号查询等等">
@@ -428,7 +428,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-30 12:10:44" itemprop="dateModified" datetime="2019-04-30T12:10:44+08:00">2019-04-30</time>
+                <time title="修改时间：2019-05-09 20:29:31" itemprop="dateModified" datetime="2019-05-09T20:29:31+08:00">2019-05-09</time>
               
             
           </span>
@@ -502,7 +502,7 @@
       
         <h3 id="什么是Ajax"><a href="#什么是Ajax" class="headerlink" title="什么是Ajax"></a>什么是Ajax</h3><p>Ajax（Asynchronous JavaScript and XML的缩写）是一种异步请求数据的web开发技术，对于改善用户的体验和页面性能很有帮助。简单地说，在不需要重新刷新页面的情况下，Ajax 通过异步请求加载后台数据，并在网页上呈现出来。常见运用场景有表单验证是否登入成功、百度搜索下拉框提示和快递单号查询等等<br><a id="more"></a></p>
 <h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p><img src="/2019/04/28/Ajax的原理与使用/1.png" alt="原理"></p>
-<h3 id="Ajax的使用"><a href="#Ajax的使用" class="headerlink" title="Ajax的使用"></a>Ajax的使用</h3><h4 id="1-创建Ajax核心对象XMLHttpRequest-记得考虑兼容性"><a href="#1-创建Ajax核心对象XMLHttpRequest-记得考虑兼容性" class="headerlink" title="1.创建Ajax核心对象XMLHttpRequest(记得考虑兼容性)"></a>1.创建Ajax核心对象XMLHttpRequest(记得考虑兼容性)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var xhr = null;</span><br><span class="line">if (window.XMLHttpRequest) &#123;</span><br><span class="line">// 兼容 IE7+, Firefox, Chrome, Opera, Safari</span><br><span class="line">  xhr = new XMLHttpRequest();</span><br><span class="line">&#125;else&#123;// 兼容 IE6, IE5</span><br><span class="line">  xhr = new ActiveObject(&quot;Microsoft.XMLHTTP)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Ajax的使用"><a href="#Ajax的使用" class="headerlink" title="Ajax的使用"></a>Ajax的使用</h3><h4 id="1-创建Ajax核心对象XMLHttpRequest-记得考虑兼容性"><a href="#1-创建Ajax核心对象XMLHttpRequest-记得考虑兼容性" class="headerlink" title="1.创建Ajax核心对象XMLHttpRequest(记得考虑兼容性)"></a>1.创建Ajax核心对象XMLHttpRequest(记得考虑兼容性)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var xhr = null;</span><br><span class="line">if (window.XMLHttpRequest) &#123;</span><br><span class="line">// 兼容 IE7+, Firefox, Chrome, Opera, Safari</span><br><span class="line">  xhr = new XMLHttpRequest();</span><br><span class="line">&#125;else&#123;// 兼容 IE6, IE5</span><br><span class="line">  xhr = new ActiveObject(&quot;Microsoft.XMLHTTP&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="2-向服务器发送请求"><a href="#2-向服务器发送请求" class="headerlink" title="2 向服务器发送请求"></a>2 向服务器发送请求</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">xhr.open(method,url,async);</span><br><span class="line">send(string)//post请求时才使用字符串参数，否则不用带参数。</span><br></pre></td></tr></table></figure>
 <p>method：请求的类型；GET 或 POST<br>url：文件在服务器上的位置<br>async：true（异步）或 false（同步）<br>例如： 发送post请求时(注：post请求一定要设置请求头的格式内容)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">xhr.open(&quot;POST&quot;,&quot;test.html&quot;,true);</span><br><span class="line">xhr.setRequestHeader(&quot;Content-type&quot;,&quot;applicationx-www-form-urlencoded&quot;)</span><br><span class="line">xhr.send(&quot;fname=Henry&amp;lname=Ford&quot;);</span><br></pre></td></tr></table></figure></p>
 <h4 id="3-服务器响应处理"><a href="#3-服务器响应处理" class="headerlink" title="3 服务器响应处理"></a>3 服务器响应处理</h4><p>responseText    获得字符串形式的响应数据。<br>responseXML   获得XML 形式的响应数据<br>异步处理：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">xhr.onreadystatechange = function() &#123;</span><br><span class="line">    if (xhr.ReadyState==4 &amp;&amp;xhr.status==200)&#123;</span><br><span class="line">        document.getElementById(&quot;myId&quot;).innerHTML = xhr.responseText</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -721,7 +721,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -789,7 +789,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">9</span>
+                      
+                    
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -929,7 +931,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共10.1k字</span>
+  <span class="post-count">博客全站共10.8k字</span>
 </div>
 
 
